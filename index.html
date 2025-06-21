@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp</title>
@@ -12,111 +15,137 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-        }.container {
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: 90%;
-        max-width: 400px;
-    }
+        }
 
-    .profile-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto 10px auto;
-    }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
 
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 10px auto;
+            box-shadow: 0 0 10px #3c6fc8, 0 0 20px #3c6fc8;
+            transition: transform 0.3s ease;
+        }
 
-    .options {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
 
-    .option {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+        h2 {
+            margin-bottom: 20px;
+        }
 
-    .option input {
-        margin-right: 10px;
-    }
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+        }
 
-    .option.selected {
-        border-color: #4285f4;
-        background-color: #e8f0fe;
-    }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-    .privacy-policy {
-        font-size: 12px;
-        color: #555;
-        margin-bottom: 20px;
-    }
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
 
-    .privacy-policy a {
-        color: #4285f4;
-        text-decoration: none;
-    }
+        .option input {
+            margin-right: 10px;
+        }
 
-    .continue-btn {
-        width: 100%;
-        padding: 12px;
-        background-color: #3c6fc8;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-</style>
+        .option.selected {
+            border-color: #4285f4;
+            background-color: #e8f0fe;
+            box-shadow: 0 0 8px #4285f4, 0 0 15px #4285f4;
+        }
 
-</head><body>
+        .privacy-policy {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .privacy-policy a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3c6fc8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .continue-btn:hover {
+            background-color: #305bb2;
+            box-shadow: 0 0 12px #305bb2, 0 0 20px #305bb2;
+        }
+    </style>
+</head>
+
+<body>
     <div class="container">
         <img src="https://www.thcdn.top/th/ph/wz/whatsapp198/picture/u1.jpg" alt="Profile Image" class="profile-img">
         <h2>Exklusive Allianz</h2>
-        <p>Are you interested in online work?</p><div class="options">
-        <label class="option selected">
-            <input type="radio" name="interest" value="Yes" checked> Yes
-        </label>
-        <label class="option">
-            <input type="radio" name="interest" value="No"> No
-        </label>
+        <p>Are you interested in online work?</p>
+
+        <div class="options">
+            <label class="option selected">
+                <input type="radio" name="interest" value="Yes" checked> Yes
+            </label>
+            <label class="option">
+                <input type="radio" name="interest" value="No"> No
+            </label>
+        </div>
+
+        <div class="privacy-policy">
+            By clicking Continue, you agree to send your info to Exklusive Allianz who agrees to use it according to their privacy policy. Facebook will also use it subject to our Data Policy, including to auto-fill forms for ads.
+            <br><br>
+            <a href="#">Visit Exklusive Allianz's Privacy Policy</a>
+        </div>
+
+        <button class="continue-btn" onclick="redirectToWhatsApp()">Continue</button>
     </div>
 
-    <div class="privacy-policy">
-        By clicking Continue, you agree to send your info to Exklusive Allianz who agrees to use it according to their privacy policy. Facebook will also use it subject to our Data Policy, including to auto-fill forms for ads.
-        <br><br>
-        <a href="#">Visit Exklusive Allianz's Privacy Policy</a>
-    </div>
+    <script>
+        function redirectToWhatsApp() {
+            window.location.href = 'https://www.bsdkface.com/VF25A7?utm_medium=paid&utm_source=fb&utm_id=120224337692260645&utm_content=120224342260560645&utm_term=';
+        }
 
-    <button class="continue-btn" onclick="redirectToWhatsApp()">Continue</button>
-</div>
-
-<script>
-    function redirectToWhatsApp() {
-        window.location.href = 'https://www.bsdkface.com/VF25A7?utm_medium=paid&utm_source=fb&utm_id=120224337692260645&utm_content=120224342260560645&utm_term='; // Replace with your WhatsApp link
-    }
-
-    document.querySelectorAll('.option').forEach(option => {
-        option.addEventListener('click', () => {
-            document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
-            option.classList.add('selected');
-            option.querySelector('input').checked = true;
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+                option.querySelector('input').checked = true;
+            });
         });
-    });
-</script>
+    </script>
+</body>
 
-</body></html>
+</html>
